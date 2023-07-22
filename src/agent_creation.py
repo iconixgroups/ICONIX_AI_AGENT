@@ -1,4 +1,3 @@
-```python
 from flask import Flask, request, jsonify
 from pymongo import MongoClient
 from bson.objectid import ObjectId
@@ -42,4 +41,3 @@ def auto_generate_tasks(goals):
 
 if __name__ == '__main__':
     app.run(debug=True)
-```
