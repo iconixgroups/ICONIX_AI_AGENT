@@ -1,4 +1,3 @@
-```python
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 
@@ -47,4 +46,3 @@ def regenerate_task(task_id, new_task):
     Function to regenerate a task
     """
     tasks_collection.update_one({'_id': ObjectId(task_id)}, {'$set': {'task': new_task, 'status': 'pending'}})
-```
