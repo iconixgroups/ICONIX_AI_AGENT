@@ -1,6 +1,13 @@
-```python
 from flask import Flask, request, jsonify
-from src import user_management, template_library, agent_creation, task_management, result_review, iteration, integrations, chat_platforms, tools
+from src.user_management import user_management
+from src.template_library import template_library
+from src.agent_creation import agent_creation
+from src.task_management import task_management
+from src.result_review import result_review
+from src.iteration import iteration
+from src.integrations import integrations
+from src.chat_platforms import chat_platforms
+from src.tools import tools
 
 app = Flask(__name__)
 
@@ -41,9 +48,8 @@ def chat():
     return chat_platforms.integrateChatPlatform(request)
 
 @app.route('/tools', methods=['POST'])
-def tools():
+def use_tools():
     return tools.useAnalyticsTool(request)
 
 if __name__ == '__main__':
     app.run(debug=True)
-```
