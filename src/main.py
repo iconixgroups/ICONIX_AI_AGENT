@@ -1,4 +1,3 @@
-```python
 from flask import Flask, request, jsonify
 from src import user_management, template_library, agent_creation, task_management, result_review, iteration, integrations, chat_platforms, tools
 
@@ -46,4 +45,3 @@ def tools():
 
 if __name__ == '__main__':
     app.run(debug=True)
-```
