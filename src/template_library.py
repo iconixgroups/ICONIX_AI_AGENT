@@ -1,4 +1,3 @@
-```python
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 
@@ -27,4 +26,3 @@ class TemplateLibrary:
         return self.templates.delete_one({"_id": ObjectId(template_id)})
 
 template_library = TemplateLibrary()
-```
