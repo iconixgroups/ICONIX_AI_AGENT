@@ -1,4 +1,3 @@
-```python
 import unittest
 from src.result_review import generateResult, downloadResult, shareResult
 
@@ -30,4 +29,3 @@ class TestResultReview(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-```
