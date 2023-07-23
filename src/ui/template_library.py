@@ -1,4 +1,3 @@
-```python
 from flask import Blueprint, render_template, request
 from src.template_library import Template
 
@@ -17,4 +16,3 @@ def template_library():
 def template_detail(template_id):
     template = Template.query.get_or_404(template_id)
     return render_template('template_detail.html', template=template)
-```
