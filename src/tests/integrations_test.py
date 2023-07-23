@@ -1,4 +1,3 @@
-```python
 import unittest
 from src.integrations import connectAIPlatform, integrateChatPlatform, useAnalyticsTool
 
@@ -26,4 +25,3 @@ class TestIntegrations(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-```
