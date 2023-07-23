@@ -1,4 +1,3 @@
-```python
 import unittest
 from iteration import retrainAgent, receiveFeedback
 
@@ -21,4 +20,3 @@ class TestIteration(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-```
