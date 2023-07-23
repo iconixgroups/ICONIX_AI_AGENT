@@ -1,4 +1,3 @@
-```python
 import openai
 import google.cloud.aiplatform
 from anthropic import AnthropicAPI
@@ -46,4 +45,3 @@ class ToolIntegration:
 
     def connect_zendesk(self):
         # Code to integrate with Zendesk
-```
