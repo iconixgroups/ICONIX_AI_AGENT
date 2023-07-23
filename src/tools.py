@@ -1,4 +1,3 @@
-```python
 import googleanalytics as ga
 import segment
 import dialogflow_v2 as dialogflow
@@ -29,4 +28,3 @@ def integrateDialogflow(project_id, session_id, texts, language_code):
 def integrateZendesk(user_id, event_name):
     zendesk = Zendesk(user_id, event_name)
     return zendesk
-```
