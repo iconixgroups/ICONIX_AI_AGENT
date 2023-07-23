@@ -1,4 +1,3 @@
-```python
 import unittest
 from src.ui.agent_settings import AgentSettings
 
@@ -29,4 +28,3 @@ class TestAgentSettings(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-```
