@@ -1,4 +1,3 @@
-```python
 import os
 import subprocess
 
@@ -47,4 +46,3 @@ def setup_cicd_pipeline():
 
 if __name__ == "__main__":
     setup_infrastructure()
-```
