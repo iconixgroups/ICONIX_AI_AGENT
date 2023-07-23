@@ -1,4 +1,3 @@
-```python
 import unittest
 from src.user_management import User, createUser, loginUser
 
@@ -17,4 +16,3 @@ class TestUserManagement(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-```
