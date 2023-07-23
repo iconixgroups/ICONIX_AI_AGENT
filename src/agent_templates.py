@@ -1,4 +1,3 @@
-```python
 class AgentTemplate:
     def __init__(self, name, description, tasks):
         self.name = name
@@ -28,4 +27,3 @@ def select_template(template_name):
         if template.name == template_name:
             return template
     return None
-```
