@@ -1,4 +1,3 @@
-```python
 import unittest
 from src import chat_platforms
 
@@ -21,4 +20,3 @@ class TestChatPlatforms(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-```
