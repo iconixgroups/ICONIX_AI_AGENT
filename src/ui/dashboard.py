@@ -1,4 +1,3 @@
-```python
 from flask import Flask, render_template, request, session
 from src.user_management import User
 from src.agent_creation import Agent
@@ -34,4 +33,3 @@ def access_template():
 
 if __name__ == '__main__':
     app.run(debug=True)
-```
