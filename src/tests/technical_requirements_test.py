@@ -1,4 +1,3 @@
-```python
 import unittest
 from src.technical_requirements import FrontEnd, BackEnd, Database, Hosting, Pipeline, Testing
 
@@ -33,4 +32,3 @@ class TestTechnicalRequirements(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-```
