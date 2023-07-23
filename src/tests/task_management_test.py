@@ -1,4 +1,3 @@
-```python
 import unittest
 from src.task_management import Task, submitTask, viewTasks
 
@@ -23,4 +22,3 @@ class TestTaskManagement(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-```
