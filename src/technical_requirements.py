@@ -1,4 +1,3 @@
-```python
 # src/technical_requirements.py
 
 # Import necessary libraries
@@ -47,4 +46,3 @@ import src.infrastructure_setup
 # Run the application
 if __name__ == '__main__':
     app.run(debug=True)
-```
