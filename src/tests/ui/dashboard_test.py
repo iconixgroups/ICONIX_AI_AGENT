@@ -1,4 +1,3 @@
-```python
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -35,4 +34,3 @@ class DashboardTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-```
