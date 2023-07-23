@@ -1,4 +1,3 @@
-```python
 import unittest
 from src.ui.agent_analytics import AgentAnalytics
 
@@ -43,4 +42,3 @@ class TestAgentAnalytics(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-```
