@@ -1,4 +1,3 @@
-```python
 from flask import Blueprint, request, jsonify
 from src.user_management import User
 from src.agent_creation import Agent
@@ -42,4 +41,3 @@ def version_agent():
 def deploy_agent():
     # Implement deployment logic here
     pass
-```
