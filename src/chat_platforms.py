@@ -1,4 +1,3 @@
-```python
 import requests
 
 class ChatPlatformIntegration:
@@ -31,4 +30,3 @@ class ChatPlatformIntegration:
 def integrateChatPlatform(platform, agent):
     chat_platform_integration = ChatPlatformIntegration(platform, agent)
     chat_platform_integration.integrate()
-```
