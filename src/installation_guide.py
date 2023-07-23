@@ -1,4 +1,3 @@
-```python
 def install_dependencies():
     print("Installing dependencies...")
     print("Running: pip install -r requirements.txt")
@@ -39,4 +38,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-```
