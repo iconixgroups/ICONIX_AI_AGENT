@@ -1,4 +1,3 @@
-```python
 from flask import Blueprint, render_template
 from src.user_management import User
 from src.agent_creation import Agent
@@ -29,4 +28,3 @@ def agent_analytics():
         })
 
     return render_template('agent-analytics.html', agent_analytics=agent_analytics)
-```
