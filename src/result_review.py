@@ -1,4 +1,3 @@
-```python
 from flask import Flask, jsonify, request
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -45,4 +44,3 @@ def share_result(id):
 
 if __name__ == '__main__':
     app.run(debug=True)
-```
