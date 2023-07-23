@@ -1,4 +1,3 @@
-```python
 import unittest
 from src.template_library import TemplateLibrary, Template
 
@@ -32,4 +31,3 @@ class TestTemplateLibrary(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-```
