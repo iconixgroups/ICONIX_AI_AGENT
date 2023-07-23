@@ -1,4 +1,3 @@
-```python
 from flask import Flask, render_template, request, redirect, url_for
 from src.agent_creation import createAgent, submitTask, customizeTask
 from src.integrations import connectAIPlatform
@@ -32,4 +31,3 @@ def task_customization():
 
 if __name__ == '__main__':
     app.run(debug=True)
-```
