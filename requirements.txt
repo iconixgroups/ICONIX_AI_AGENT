@@ -1,0 +1,18 @@
+# This is a list of packages identified from the Python files in your project.
+# Please note that the versions of these packages are not specified.
+# You may need to specify the versions based on the environment you are using.
+
+numpy
+pandas
+matplotlib
+scipy
+sklearn
+tensorflow
+keras
+flask
+sqlalchemy
+psycopg2
+requests
+beautifulsoup4
+selenium
+pytest
