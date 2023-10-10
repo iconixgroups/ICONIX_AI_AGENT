@@ -6,7 +6,7 @@ agent_settings = Blueprint('agent_settings', __name__)
 
 @agent_settings.route('/updateAgentSettings', methods=['POST'])
 def update_agent_settings():
-    data = request.get_json()
+    data = request.form
     user = User.query.filter_by(id=data['userId']).first()
     if not user:
         return jsonify({'message': 'User not found!'}), 404
@@ -25,19 +25,19 @@ def update_agent_settings():
 @agent_settings.route('/backupAgent', methods=['POST'])
 def backup_agent():
     # Implement backup logic here
-    pass
+    return jsonify({'message': 'Backup logic not implemented yet!'}), 501
 
 @agent_settings.route('/addCollaborator', methods=['POST'])
 def add_collaborator():
     # Implement collaborator addition logic here
-    pass
+    return jsonify({'message': 'Collaborator addition logic not implemented yet!'}), 501
 
 @agent_settings.route('/versionAgent', methods=['POST'])
 def version_agent():
     # Implement versioning logic here
-    pass
+    return jsonify({'message': 'Versioning logic not implemented yet!'}), 501
 
 @agent_settings.route('/deployAgent', methods=['POST'])
 def deploy_agent():
     # Implement deployment logic here
-    pass
+    return jsonify({'message': 'Deployment logic not implemented yet!'}), 501

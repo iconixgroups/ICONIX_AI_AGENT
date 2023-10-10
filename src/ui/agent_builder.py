@@ -29,5 +29,21 @@ def task_customization():
     customizeTask(task_id, customization)
     return redirect(url_for('dashboard'))
 
+@app.route('/backupAgent', methods=['POST'])
+def backup_agent():
+    return jsonify({'message': 'Backup logic not implemented yet!'}), 501
+
+@app.route('/addCollaborator', methods=['POST'])
+def add_collaborator():
+    return jsonify({'message': 'Collaborator addition logic not implemented yet!'}), 501
+
+@app.route('/versionAgent', methods=['POST'])
+def version_agent():
+    return jsonify({'message': 'Versioning logic not implemented yet!'}), 501
+
+@app.route('/deployAgent', methods=['POST'])
+def deploy_agent():
+    return jsonify({'message': 'Deployment logic not implemented yet!'}), 501
+
 if __name__ == '__main__':
     app.run(debug=True)

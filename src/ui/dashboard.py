@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, redirect, url_for
 from src.user_management import User
 from src.agent_creation import Agent
 
@@ -27,7 +27,7 @@ def create_agent():
 @app.route('/access_template', methods=['GET'])
 def access_template():
     if 'username' in session:
-        return redirect(url_for('template_library'))
+        return redirect(url_for('template_library_bp.template_library'))
     else:
         return redirect(url_for('login'))
 
