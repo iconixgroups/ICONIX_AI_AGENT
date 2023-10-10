@@ -37,12 +37,10 @@
 
 # Remember to replace <project_directory> with the actual path to your project directory.
 
-# Let me know if you need help with any of these steps.
-
 # Your code goes here...
-from .ui import agent_builder, dashboard
-from ..agent_creation import create_agent
-from ..chat_platforms import start_chat
+from src.ui import agent_builder, dashboard
+from src.agent_creation import create_agent
+from src.chat_platforms import start_chat
 
 def main():
     agent = create_agent(agent_builder)
