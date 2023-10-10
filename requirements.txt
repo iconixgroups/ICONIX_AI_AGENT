@@ -6,7 +6,6 @@ flask_cors
 pymongo
 googleanalytics
 segment
-dialogflow_v2
 zendesk
 numpy
 pandas
