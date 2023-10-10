@@ -1,55 +1,42 @@
-from flask import Flask, request, jsonify
-from src.user_management import signup, login
-from src.template_library import browse_template
-from src.agent_creation import create_agent
-from src.task_management import submit_task
-from src.result_review import review_result
-from src.iteration import retrain
-from src.integrations import integrate
-from src.chat_platforms import chat
-from src.tools import use_tools
+# Step-by-step process for setting up the project using Python 3 and a virtual environment on your MacBook Air M1:
 
-app = Flask(__name__)
+# 1. Open Terminal in Visual Studio Code:
+# You can open the terminal in Visual Studio Code by clicking on Terminal in the top menu and then New Terminal.
 
-@app.route('/signup', methods=['POST'])
-def signup():
-    return signup(request)
+# 2. Navigate to the project directory:
+# Use the cd command to navigate to the project directory:
+# cd <project_directory>
 
-@app.route('/login', methods=['POST'])
-def login():
-    return login(request)
+# 3. Create a virtual environment:
+# You can create a virtual environment in your project directory using the following command:
+# python3 -m venv venv
+# This will create a new directory called "venv" in your project directory.
 
-@app.route('/browse-template', methods=['GET'])
-def browse_template():
-    return browse_template(request)
+# 4. Activate the virtual environment:
+# Before you can start installing or using packages in your virtual environment you’ll need to activate it. 
+# Activating a virtual environment will put the virtual environment-specific python and pip executables into your shell’s PATH.
+# source venv/bin/activate
+# Now, you're in the virtual environment, and you can install dependencies related to the project here which won't affect your global Python setup.
 
-@app.route('/create-agent', methods=['POST'])
-def create_agent():
-    return create_agent(request)
+# 5. Install Python dependencies:
+# The project's Python dependencies are listed in the requirements.txt file. 
+# You can install these dependencies using pip:
+# pip install -r requirements.txt
 
-@app.route('/submit-task', methods=['POST'])
-def submit_task():
-    return submit_task(request)
+# 6. Set environment variables:
+# The project uses environment variables for configuration. 
+# You need to set these environment variables in your terminal or add them to a .env file in the project directory. 
+# The exact variables you need to set will depend on your project, but they may include things like database URLs, secret keys, and so on.
 
-@app.route('/review-result', methods=['GET'])
-def review_result():
-    return review_result(request)
+# 7. Run the project:
+# Finally, you can run the project using the following command:
+# python3 src/main.py
 
-@app.route('/retrain', methods=['POST'])
-def retrain():
-    return retrain(request)
+# 8. Deactivate the virtual environment:
+# Once you are done with your work, you can deactivate the virtual environment by simply typing deactivate in the terminal.
 
-@app.route('/integrate', methods=['POST'])
-def integrate():
-    return integrate(request)
+# Remember to replace <project_directory> with the actual path to your project directory.
 
-@app.route('/chat', methods=['POST'])
-def chat():
-    return chat(request)
+# Let me know if you need help with any of these steps.
 
-@app.route('/tools', methods=['POST'])
-def use_tools():
-    return use_tools(request)
-
-if __name__ == '__main__':
-    app.run(debug=True)
+# Your code goes here...
