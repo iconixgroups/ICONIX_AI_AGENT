@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, session, redirect, url_for
-from src.user_management import User
-from src.agent_creation import Agent
+from ..user_management import User
+from ..agent_creation import Agent
 
 app = Flask(__name__)
 
