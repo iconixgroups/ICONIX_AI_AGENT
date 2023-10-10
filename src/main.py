@@ -13,8 +13,8 @@
 # This will create a new directory called "venv" in your project directory.
 
 # 4. Activate the virtual environment:
-# Before you can start installing or using packages in your virtual environment youâll need to activate it. 
-# Activating a virtual environment will put the virtual environment-specific python and pip executables into your shellâs PATH.
+# Before you can start installing or using packages in your virtual environment you'll need to activate it. 
+# Activating a virtual environment will put the virtual environment-specific python and pip executables into your shell's PATH.
 # source venv/bin/activate
 # Now, you're in the virtual environment, and you can install dependencies related to the project here which won't affect your global Python setup.
 
@@ -40,9 +40,9 @@
 # Let me know if you need help with any of these steps.
 
 # Your code goes here...
-from ui import agent_builder, dashboard
-from agent_creation import create_agent
-from chat_platforms import start_chat
+from .ui import agent_builder, dashboard
+from ..agent_creation import create_agent
+from ..chat_platforms import start_chat
 
 def main():
     agent = create_agent(agent_builder)

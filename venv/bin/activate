@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This file must be used with "source bin/activate" *from bash*
 # you cannot run it directly
@@ -43,7 +43,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/username/path/to/venv"
+VIRTUAL_ENV="/home/user/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -66,18 +66,16 @@ if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT-}" ] ; then
     export PS1
 fi
 
-# Make sure to use python3
-if command -v python3 >/dev/null 2>&1; then
-    PYTHON="python3"
-else
-    echo "Error: Python 3 is not installed."
-    return 1
-fi
+# Make sure to unalias pydoc if it's already there
+alias pydoc 2>/dev/null >/dev/null && unalias pydoc || true
 
-export PYTHON
+pydoc () {
+    python -m pydoc "$@"
+}
 
-# Source the postactivate script if it exists
-_POSTACTIVATE="$VIRTUAL_ENV/bin/postactivate"
-if [ -f "$_POSTACTIVATE" ]; then
-    . "$_POSTACTIVATE"
+# This should detect bash and zsh, which have a hash command that must
+# be called to get it to forget past commands.  Without forgetting
+# past commands the $PATH changes we made may not be respected
+if [ -n "${BASH-}" ] || [ -n "${ZSH_VERSION-}" ] ; then
+    hash -r 2>/dev/null
 fi
