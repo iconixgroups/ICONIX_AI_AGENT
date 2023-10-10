@@ -1,3 +1,23 @@
+# Import modules
+import src.user_management  # Ensure this line starts at the beginning of the line
+import src.template_library
+import src.agent_templates
+import src.onboarding
+import src.agent_creation
+import src.task_management
+import src.result_review
+import src.iteration
+import src.integrations
+import src.chat_platforms
+import src.tools
+import src.ui.landing_page
+import src.ui.dashboard
+import src.ui.template_library
+import src.ui.agent_builder
+import src.ui.agent_analytics
+import src.ui.agent_settings
+import src.installation_guide
+import src.infrastructure_setup
 from flask import Flask, request, jsonify
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager, create_access_token
@@ -51,27 +71,6 @@ class User(Document):
 # User schema
 class UserSchema:
     # define schema
-
-# Import modules
-import src.user_management
-import src.template_library
-import src.agent_templates
-import src.onboarding
-import src.agent_creation
-import src.task_management
-import src.result_review
-import src.iteration
-import src.integrations
-import src.chat_platforms
-import src.tools
-import src.ui.landing_page
-import src.ui.dashboard
-import src.ui.template_library
-import src.ui.agent_builder
-import src.ui.agent_analytics
-import src.ui.agent_settings
-import src.installation_guide
-import src.infrastructure_setup
 
 # Run the application
 if __name__ == '__main__':
