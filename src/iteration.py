@@ -1,6 +1,6 @@
-from src.agent_creation import Agent
-from src.result_review import Result
-from src.task_management import Task
+from .agent_creation import Agent
+from .result_review import Result
+from .task_management import Task
 
 class Iteration:
     def __init__(self, agent: Agent, task: Task, result: Result):

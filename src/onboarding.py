@@ -1,13 +1,9 @@
 from flask import Flask, request, jsonify
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager, create_access_token
-from user_management import User, UserSchema
+from src.user_management import User, UserSchema
 from flask_cors import CORS
-
-app = Flask(__name__)
-bcrypt = Bcrypt(app)
-jwt = JWTManager(app)
-CORS(app)
+from src.shared_dependencies import app, bcrypt, jwt, CORS
 
 @app.route('/signup', methods=['POST'])
 def signup():

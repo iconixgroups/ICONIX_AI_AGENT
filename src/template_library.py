@@ -1,28 +1,19 @@
-from pymongo import MongoClient
-from bson.objectid import ObjectId
+from src.shared_dependencies import MongoClient, ObjectId, templates
 
-class TemplateLibrary:
-    def __init__(self):
-        self.client = MongoClient('mongodb://localhost:27017/')
-        self.db = self.client['iconix_ai_agent']
-        self.templates = self.db['templates']
+def browse_templates(category=None):
+    if category:
+        return list(templates.find({"category": category}))
+    else:
+        return list(templates.find())
 
-    def browse_templates(self, category=None):
-        if category:
-            return list(self.templates.find({"category": category}))
-        else:
-            return list(self.templates.find())
+def get_template(template_id):
+    return templates.find_one({"_id": ObjectId(template_id)})
 
-    def get_template(self, template_id):
-        return self.templates.find_one({"_id": ObjectId(template_id)})
+def add_template(template_data):
+    return templates.insert_one(template_data)
 
-    def add_template(self, template_data):
-        return self.templates.insert_one(template_data)
+def update_template(template_id, template_data):
+    return templates.update_one({"_id": ObjectId(template_id)}, {"$set": template_data})
 
-    def update_template(self, template_id, template_data):
-        return self.templates.update_one({"_id": ObjectId(template_id)}, {"$set": template_data})
-
-    def delete_template(self, template_id):
-        return self.templates.delete_one({"_id": ObjectId(template_id)})
-
-template_library = TemplateLibrary()
+def delete_template(template_id):
+    return templates.delete_one({"_id": ObjectId(template_id)})

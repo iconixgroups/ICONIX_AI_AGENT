@@ -1,10 +1,5 @@
-from flask import Flask, jsonify, request
-from flask_pymongo import PyMongo
-from bson.objectid import ObjectId
-
-app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb://localhost:27017/iconix"
-mongo = PyMongo(app)
+from src.shared_dependencies import app, mongo
+from flask import jsonify
 
 @app.route('/results', methods=['GET'])
 def get_results():
@@ -41,6 +36,3 @@ def share_result(id):
         return jsonify(result)
     else:
         return jsonify({"error": "Result not found"}), 404
-
-if __name__ == '__main__':
-    app.run(debug=True)

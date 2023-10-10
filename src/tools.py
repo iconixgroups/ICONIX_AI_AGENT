@@ -1,7 +1,7 @@
-import googleanalytics as ga
-import segment
-import dialogflow_v2 as dialogflow
-from zendesk import Zendesk
+from src.shared_dependencies import ga
+from src.shared_dependencies import segment
+from src.shared_dependencies import dialogflow
+from src.shared_dependencies import Zendesk
 
 # Google Analytics
 def useAnalyticsTool(user_id, event_name):

@@ -1,9 +1,15 @@
-# src/technical_requirements.py
-
-# Import necessary libraries
-from flask import Flask
+from flask import Flask, request, jsonify
+from flask_bcrypt import Bcrypt
+from flask_jwt_extended import JWTManager, create_access_token
 from flask_mongoengine import MongoEngine
+from mongoengine import Document, StringField, EmailField
 from flask_cors import CORS
+from pymongo import MongoClient
+from bson.objectid import ObjectId
+import googleanalytics as ga
+import segment
+import dialogflow_v2 as dialogflow
+from zendesk import Zendesk
 
 # Initialize Flask application
 app = Flask(__name__)
@@ -21,6 +27,30 @@ app.config['MONGODB_SETTINGS'] = {
 # Initialize MongoEngine
 db = MongoEngine()
 db.init_app(app)
+
+# Initialize Bcrypt
+bcrypt = Bcrypt(app)
+
+# Initialize JWTManager
+jwt = JWTManager(app)
+
+# MongoDB connection
+client = MongoClient('mongodb://localhost:27017/')
+db = client['iconix_ai_agent']
+tasks_collection = db['tasks']
+
+# Shared schemas
+from src.shared_schemas import TaskSchema
+
+# User model
+class User(Document):
+    username = StringField(required=True, unique=True)
+    email = EmailField(required=True, unique=True)
+    password = StringField(required=True)
+
+# User schema
+class UserSchema:
+    # define schema
 
 # Import modules
 import src.user_management
@@ -42,8 +72,6 @@ import src.ui.agent_analytics
 import src.ui.agent_settings
 import src.installation_guide
 import src.infrastructure_setup
-from src.shared_dependencies import tasks_collection
-from src.shared_dependencies import app, db
 
 # Run the application
 if __name__ == '__main__':

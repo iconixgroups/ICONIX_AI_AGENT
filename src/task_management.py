@@ -1,13 +1,4 @@
-from pymongo import MongoClient
-from bson.objectid import ObjectId
-
-# MongoDB connection
-client = MongoClient('mongodb://localhost:27017/')
-db = client['iconix_ai_agent']
-tasks_collection = db['tasks']
-
-# Shared schemas
-from src.shared_schemas import TaskSchema
+from src.shared_dependencies import tasks_collection, TaskSchema
 
 def submit_task(user_id, agent_id, task):
     """

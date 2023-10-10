@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from pymongo import MongoClient
 from bson.objectid import ObjectId
-from schemas import AgentSchema
+from .schemas import AgentSchema
 
 app = Flask(__name__)
 

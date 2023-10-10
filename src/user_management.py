@@ -3,11 +3,7 @@ from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager, create_access_token
 from flask_mongoengine import MongoEngine
 from mongoengine import Document, StringField, EmailField
-
-app = Flask(__name__)
-bcrypt = Bcrypt(app)
-jwt = JWTManager(app)
-db = MongoEngine(app)
+from src.shared_dependencies import app, bcrypt, jwt, db
 
 class User(Document):
     username = StringField(required=True, unique=True)
